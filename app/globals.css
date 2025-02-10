@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-mulish: "Mulish", sans-serif;
+
+    --primary: 263 69% 46%;
+    --primary-light: 261 51% 54%;
+    --primary-foreground: 0 0% 100%;
+
+    --gray: 218 16% 80%;
+    --gray-light: 214 14% 90%;
+    --background: 0 0% 100%;
+    --foreground: 220 10% 10%;
+
+    --success: 178 99% 34%;
+    --warning: 43 100% 50%;
+    --danger: 346 82% 52%;
+
+    --accent: 240 100% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 263 69% 46%;
+  }
+
+  body {
+    font-family: var(--font-mulish);
+  }
+}
