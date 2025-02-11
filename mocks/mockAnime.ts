@@ -31,10 +31,16 @@ export const mockAnimeList: AnimeProps[] = [
   },
 ];
 
-export const mockAnimeData = {
+export const mockAnimeData: Anime = {
   id: 1,
-  title: "Naruto",
+  title: { english: "Naruto", romaji: "Naruto" },
   image: "",
   genres: ["genre"],
   rating: 90,
+  coverImage: {
+    large: "",
+  },
+  description: "",
+  status: "",
+  averageScore: 0,
 };

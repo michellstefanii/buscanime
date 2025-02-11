@@ -1,10 +1,11 @@
 interface Anime {
+  id: number;
   coverImage: {
     large: string;
   };
   title: {
     romaji: string;
-    english?: string;
+    english: string;
   };
   genres: string[];
   description: string;
@@ -12,6 +13,8 @@ interface Anime {
   episodes?: number;
   status: string;
   averageScore: number;
+  rating: number;
+  image: string;
 }
 
 interface AnimeCardProps {
@@ -29,7 +32,7 @@ interface AnimeProps {
   };
   title: {
     romaji: string;
-    english?: string;
+    english: string;
     native?: string;
   };
   image: string;
@@ -55,7 +58,7 @@ interface UseAnimeLoaderReturn {
 }
 
 interface UseAnimeDetailsReturn {
-  anime: AnimeProps | null;
+  anime: Anime | null;
   loading: boolean;
   goBack: () => void;
 }

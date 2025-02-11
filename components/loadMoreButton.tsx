@@ -1,3 +1,5 @@
+import Spinner from "./spinner";
+
 export function LoadMoreButton({
   loading,
   onClick,
@@ -11,7 +13,7 @@ export function LoadMoreButton({
       onClick={onClick}
       disabled={loading}
     >
-      {loading ? "Carregando..." : "+ Ver mais"}
+      {loading ? <Spinner /> : "+ Load more"}
     </button>
   );
 }

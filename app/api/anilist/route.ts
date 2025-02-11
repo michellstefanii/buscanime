@@ -41,12 +41,12 @@ const fetchAnime = cache(
       const data = await response.json();
 
       if (!response.ok || !data.data) {
-        throw new Error("Erro ao buscar dados da API do AniList.");
+        throw new Error("Error fetching data from AniList API.");
       }
 
       return data.data.Page.media;
     } catch (error) {
-      console.error("Erro ao buscar animes:", error);
+      console.error("Error searching for anime:", error);
       return null;
     }
   }
@@ -62,7 +62,7 @@ export async function GET(req: Request) {
 
   if (!animeData) {
     return NextResponse.json(
-      { error: "Erro ao buscar animes ou limite de requisições excedido." },
+      { error: "Error searching for anime or request limit exceeded." },
       { status: 500 }
     );
   }

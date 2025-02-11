@@ -40,7 +40,6 @@ export function useAnimeLoader(): UseAnimeLoaderReturn {
         ),
       ]);
     } catch (error) {
-      console.error("Erro ao carregar animes:", error);
       setEmptyResult(true);
     } finally {
       setLoading(false);

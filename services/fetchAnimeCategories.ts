@@ -4,7 +4,7 @@ export async function fetchAnimeCategories(): Promise<Category[]> {
   );
 
   if (!response.ok) {
-    throw new Error("Erro ao buscar dados da categoria");
+    throw new Error("Error fetching category data");
   }
 
   return response.json();

@@ -1,8 +1,8 @@
 export function formatAnimeTitle(title: {
-  english?: string;
-  romaji?: string;
+  english: string;
+  romaji: string;
 }): string {
-  return title.english || title.romaji || "Título Desconhecido";
+  return title.english || title.romaji || "Unknown Title";
 }
 
 export const getRatingColor = (rating: number): string => {
@@ -16,8 +16,8 @@ export const getShortenTitle = (title: string): string => {
 };
 
 export const getShortTitleFormated = (title: {
-  english?: string;
-  romaji?: string;
+  english: string;
+  romaji: string;
 }): string => {
   return getShortenTitle(formatAnimeTitle(title));
 };

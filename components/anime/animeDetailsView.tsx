@@ -14,13 +14,13 @@ export function AnimeDetailsView({
         onClick={goBack}
         className="bg-primary text-white px-4 h-10 rounded-md fixed z-10"
       >
-        VOLTAR
+        RETURN
       </button>
       <div className="flex flex-col mt-8">
         <div className="flex gap-4 items-center mb-2">
           <Image
             src={anime.coverImage.large}
-            alt={anime.title.romaji}
+            alt={formatAnimeTitle(anime.title)}
             width={200}
             height={300}
             className="rounded-lg shadow-lg mt-4"

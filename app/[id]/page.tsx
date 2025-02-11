@@ -14,7 +14,7 @@ export default function AnimeDetailsPage() {
       </div>
     );
 
-  if (!anime) return <p className="text-center">Anime não encontrado.</p>;
+  if (!anime) return <p className="text-center">Anime not found.</p>;
 
   return <AnimeDetailsView anime={anime} goBack={goBack} />;
 }

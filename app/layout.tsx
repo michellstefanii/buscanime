@@ -10,6 +10,11 @@ const mulish = Mulish({
   variable: "--font-mulish",
 });
 
+export const metadata = {
+  title: "BUSCANIME - Your anime search engine.",
+  description: "Find a new anime to watch now!",
+};
+
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-BR" className={mulish.variable}>

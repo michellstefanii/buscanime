@@ -30,7 +30,7 @@ export function AnimeGrid() {
 
       {emptyResult && !loading && (
         <p className="mt-6 text-gray-500 text-lg text-center">
-          Nenhum anime encontrado.
+          No anime found.
         </p>
       )}
 

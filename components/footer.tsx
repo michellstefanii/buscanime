@@ -5,9 +5,7 @@ export const Footer = () => {
         <span className="text-white">BUSC</span>
         <span className="text-warning">ANIME</span>
       </div>
-      <div className="mt-1 text-xs text-white/80">
-        TODOS OS DIREITOS RESERVADOS
-      </div>
+      <div className="mt-1 text-xs text-white/80">ALL RIGHTS RESERVED</div>
     </footer>
   );
 };

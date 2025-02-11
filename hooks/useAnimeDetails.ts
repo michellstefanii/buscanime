@@ -5,7 +5,7 @@ import { fetchAnimeById } from "@/services/fetchAnimeById";
 export function useAnimeDetails(): UseAnimeDetailsReturn {
   const router = useRouter();
   const { id } = useParams();
-  const [anime, setAnime] = useState<any>(null);
+  const [anime, setAnime] = useState<Anime | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

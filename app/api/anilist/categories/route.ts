@@ -39,7 +39,7 @@ const fetchCategories = cache(async () => {
 
     return categories;
   } catch (error) {
-    console.error("Erro ao buscar categorias:", error);
+    console.error("Error fetching categories:", error);
     return null;
   }
 });
@@ -49,7 +49,7 @@ export async function GET() {
 
   if (!categories) {
     return NextResponse.json(
-      { error: "Erro ao buscar categorias ou limite de requisições excedido." },
+      { error: "Error fetching categories or request limit exceeded." },
       { status: 500 }
     );
   }

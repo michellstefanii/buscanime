@@ -8,7 +8,7 @@ export async function fetchAnimeData(
   );
 
   if (!response.ok) {
-    throw new Error("Erro ao buscar dados");
+    throw new Error("Error fetching data");
   }
 
   return response.json();

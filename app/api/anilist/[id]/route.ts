@@ -7,7 +7,7 @@ export async function GET(
   const paramsParsed = await params;
 
   if (!paramsParsed?.id) {
-    return NextResponse.json({ error: "ID não encontrado" }, { status: 400 });
+    return NextResponse.json({ error: "ID not found" }, { status: 400 });
   }
 
   const id = parseInt(paramsParsed.id, 10);
@@ -48,14 +48,14 @@ export async function GET(
     const data = await response.json();
 
     if (!response.ok || !data.data) {
-      throw new Error("Erro ao buscar detalhes do anime.");
+      throw new Error("Error fetching anime details.");
     }
 
     return NextResponse.json(data.data.Media);
   } catch (error) {
-    console.error("Erro ao buscar anime:", error);
+    console.error("Error searching for anime:", error);
     return NextResponse.json(
-      { error: "Erro ao buscar detalhes do anime." },
+      { error: "Error fetching anime details." },
       { status: 500 }
     );
   }
