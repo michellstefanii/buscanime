@@ -13,6 +13,23 @@ const mulish = Mulish({
 export const metadata = {
   title: "BUSCANIME - Your anime search engine.",
   description: "Find a new anime to watch now!",
+  keywords: "animes, otaku",
+  authors: [{ name: "Michel S.", url: "https://michellstefanii.github.io/" }],
+  openGraph: {
+    title: "BUSCANIME - Your anime search engine.",
+    description: "Veja este site incrível com os melhores conteúdos!",
+    url: "https://buscanime-amber.vercel.app/",
+    siteName: "BUSCANIME",
+    images: [
+      {
+        url: "https://buscanime-amber.vercel.app/img/SEO.jpg",
+        width: 1200,
+        height: 630,
+        alt: "buscanime",
+      },
+    ],
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
