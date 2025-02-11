@@ -11,7 +11,7 @@ export function AnimeGrid() {
 
   return (
     <>
-      <div className="grid gap-4 grid-cols-[repeat(auto-fit,minmax(300px,1fr))] max-w-[1318px] mx-auto">
+      <div className="grid gap-4 grid-cols-[repeat(auto-fill,minmax(300px,1fr))] max-w-[1318px] mx-auto">
         {loading && animes.length === 0
           ? Array.from({ length: 12 }).map((_, index) => (
               <SkeletonCard key={index} />

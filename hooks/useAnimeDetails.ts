@@ -12,13 +12,22 @@ export function useAnimeDetails(): UseAnimeDetailsReturn {
     async function loadAnime() {
       setLoading(true);
       const data = await fetchAnimeById(String(id));
-      setAnime(data);
+      setAnime(data || null);
       setLoading(false);
     }
     loadAnime();
   }, [id]);
 
-  const goBack = () => router.back();
+  const goBack = () => {
+    if (
+      document.referrer &&
+      new URL(document.referrer).origin === window.location.origin
+    ) {
+      router.back();
+    } else {
+      router.push("/");
+    }
+  };
 
   return { anime, loading, goBack };
 }
