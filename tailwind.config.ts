@@ -12,6 +12,10 @@ module.exports = {
         mulish: ["var(--font-mulish)", "sans-serif"],
       },
       colors: {
+        success: "hsl(var(--success))",
+        warning: "hsl(var(--warning))",
+        danger: "hsl(var(--danger))",
+
         primary: "hsl(var(--primary))",
         "primary-light": "hsl(var(--primary-light))",
         "primary-foreground": "hsl(var(--primary-foreground))",
@@ -21,10 +25,6 @@ module.exports = {
 
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-
-        success: "hsl(var(--success))",
-        warning: "hsl(var(--warning))",
-        danger: "hsl(var(--danger))",
 
         accent: "hsl(var(--accent))",
         "accent-foreground": "hsl(var(--accent-foreground))",
@@ -40,5 +40,13 @@ module.exports = {
       },
     },
   },
+  safelist: [
+    "bg-success",
+    "text-success",
+    "hover:bg-success",
+    "bg-danger",
+    "text-danger",
+    "hover:bg-danger",
+  ],
   plugins: [require("tailwindcss-animate")],
 };

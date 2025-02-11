@@ -13,7 +13,7 @@ export function LoadMoreButton({
       onClick={onClick}
       disabled={loading}
     >
-      {loading ? <Spinner /> : "+ Load more"}
+      {loading ? <Spinner size={24} color="white" /> : "+ Load more"}
     </button>
   );
 }
